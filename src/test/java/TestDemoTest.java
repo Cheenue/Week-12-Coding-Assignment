@@ -34,11 +34,12 @@ public class TestDemoTest {
 
     private static Stream<Arguments> argumentsForAddPositive() {
         return Stream.of(
-                arguments(2, 4, 6, false));
+                arguments(2, 4, 6, false),
+                arguments(3, 7, 10, false));
     }
 
     @Test
-    void assertThatNumberSquaredIsCorrect() {
+    void assertThatNumberSquaredIsCorrect(){
         TestDemo testDemo = new TestDemo();
         TestDemo mockDemo = spy(testDemo);
 
@@ -49,4 +50,3 @@ public class TestDemoTest {
         assertThat(fiveSquared).isEqualTo(25);
     }
 }
-
